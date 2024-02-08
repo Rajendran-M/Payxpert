@@ -40,13 +40,13 @@ public class PayrollService implements IPayrollService {
 				double basicSalary = 15000;
 				double overtimePay = 6000;
 				double deduction = 700;
-				double netSalary = basicSalary + overtimePay - deduction;
 
 				if (position.equalsIgnoreCase("Manager") || position.equalsIgnoreCase("HR Specialist")) {
 					basicSalary = 30000;
 					overtimePay = 4000;
 					deduction = 1200;
 				}
+				double netSalary = basicSalary + overtimePay - deduction;
 
 				PreparedStatement ps = con
 						.prepareStatement("INSERT INTO PAYROLL(EmployeeID, PayPeriodStartDate, PayPeriodEndDate, "

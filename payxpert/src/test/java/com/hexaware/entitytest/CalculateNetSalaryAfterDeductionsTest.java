@@ -17,7 +17,7 @@ public class CalculateNetSalaryAfterDeductionsTest {
 		payrollCheck.setOvertimePay(1000.0);
 		payrollCheck.setDeductions(500.0);
 		payrollCheck.setNetSalary();//
-		double netSalary = payrollCheck.getBasicSalary()+payrollCheck.getOvertimePay()-payrollCheck.getDeductions();
+		double netSalary =7000+1000-500;
 		 assertEquals(netSalary,payrollCheck.getNetSalary(), 0.001);
 		
 	}

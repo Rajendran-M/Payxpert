@@ -26,8 +26,8 @@ public class TaxService implements ITaxService {
 	 * @param taxYear    The tax year for which tax needs to be calculated.
 	 * @return The calculated tax amount.
 	 */
-  @Override
-  public double calculateTax(int employeeId, Year taxYear) {
+	@Override
+	public double calculateTax(int employeeId, Year taxYear) {
 		try {
 			Connection con = DBConnUtil.getConnection();
 
@@ -65,7 +65,7 @@ public class TaxService implements ITaxService {
 					throw new SQLException("Failed to insert tax record.");
 				}
 
-				return taxableIncome;
+				return taxamount;
 			} else {//
 				throw (new TaxCalculationException(
 						"No record found to calculate tax for eid:" + employeeId + " for taxyear" + taxYear));
@@ -86,11 +86,10 @@ public class TaxService implements ITaxService {
 	 *
 	 * @param taxId The ID of the tax record to retrieve.
 	 * @return The Tax object containing details of the tax record with the given
-	 *         ID.
-	                               not found.
+	 *         ID. not found.
 	 */
-  @Override
-  public Tax getTaxById(int taxId) {
+	@Override
+	public Tax getTaxById(int taxId) {
 		try {
 			Connection con = DBConnUtil.getConnection();
 
@@ -123,8 +122,8 @@ public class TaxService implements ITaxService {
 	 * @param employeeId The ID of the employee.
 	 * @return A List containing all tax records for the specified employee.
 	 */
-  @Override
-  public List<Tax> getTaxesForEmployee(int employeeId) {
+	@Override
+	public List<Tax> getTaxesForEmployee(int employeeId) {
 		Connection con = DBConnUtil.getConnection();
 		List<Tax> taxList = new ArrayList<>();
 		Tax tax;
@@ -158,14 +157,15 @@ public class TaxService implements ITaxService {
 		return null;
 	}
 
-  /**
-   * Retrieves all tax records for the specified tax year.
-   * @param taxYear The tax year.
-   * @return A List containing all tax records for the specified tax year.
-
- */
-  @Override
-  public List<Tax> getTaxesForYear(Year taxYear) {
+	/**
+	 * Retrieves all tax records for the specified tax year.
+	 * 
+	 * @param taxYear The tax year.
+	 * @return A List containing all tax records for the specified tax year.
+	 * 
+	 */
+	@Override
+	public List<Tax> getTaxesForYear(Year taxYear) {
 		try {
 			Connection con = DBConnUtil.getConnection();
 
