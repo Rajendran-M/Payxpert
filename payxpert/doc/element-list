@@ -1,0 +1,8 @@
+com.hexaware.controller
+com.hexaware.dao
+com.hexaware.daotest
+com.hexaware.entitytest
+com.hexaware.exception
+com.hexaware.main
+com.hexaware.model
+com.hexaware.util
