@@ -40,6 +40,7 @@ public void calculateAge() {
 	
 
 public Employee() {
+	//default constructor
 	
 }
 public Employee(int employeeID, String firstName, String lastName, Date dateOfBirth, String gender, String email,

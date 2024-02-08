@@ -70,10 +70,14 @@ public class ControllerImpl implements IControllerservice {
 
 			System.out.print("Enter Gender: ");
 			String gender = sc.next();
-
+            
 			System.out.print("Enter Email: ");
 			String email = sc.next();
-
+           while(!email.contains("@")) {
+        	   System.out.println(ANSI_RED+"Invalid 'Email ID'.Please enter valid email!(example@domain.com) "+ANSI_RESET);
+        	   System.out.print("Enter Email: ");
+        	   email = sc.next();
+           }
 			System.out.print("Enter Phone Number: ");
 			String phoneNumber = sc.next();
 
